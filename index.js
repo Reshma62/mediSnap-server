@@ -8,8 +8,12 @@ const Routes = require("./routes");
 const dbConnection = require("./utils/dbConfige");
 const verifiToken = require("./middleware/verifiToken");
 const PORT = process.env.PORT || 8000;
-
+const path = require("path");
 //middleware
+/* app.use(
+  "/public/uploads",
+  express.static(path.join(__dirname, "/public/uploads"))
+); */
 app.use(express.static("public"));
 app.use(cookieParser());
 app.use(
